@@ -1,44 +1,150 @@
+/* === Global Styles === */
 body {
-  background-color: #f0f2f5;
-  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f8ff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
   padding: 20px;
 }
 
-.quiz-container {
-  background: #fff;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  max-width: 800px;
-  margin: auto;
-}
-
-.question {
-  font-weight: 600;
-}
-
-.option {
-  margin-bottom: 10px;
-}
-
-.section-switcher {
+/* === Heading === */
+h2 {
+  font-weight: bold;
+  text-align: center;
   margin-bottom: 20px;
 }
 
-.timer {
+/* === Quiz Card === */
+.card, #quizBox {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* === Timer === */
+#timer {
+  font-size: 1.2rem;
   font-weight: bold;
-  color: #dc3545;
-}
-
-.results {
-  display: none;
-  padding: 20px;
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 10px 15px;
   border-radius: 10px;
-  background-color: #e9ecef;
+  border: 1px solid #ffeeba;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-@media (max-width: 576px) {
-  .quiz-container {
-    padding: 10px;
+/* === Question Styling === */
+#question {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  min-height: 60px;
+}
+
+/* === Options Styling === */
+.options {
+  margin-top: 10px;
+}
+
+.options label {
+  display: block;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.options label:hover {
+  background-color: #e2e6ea;
+}
+
+.options input[type="radio"] {
+  margin-right: 10px;
+}
+
+/* === Navigation Buttons === */
+button {
+  border-radius: 8px;
+  padding: 8px 16px;
+  margin: 10px 5px 0 0;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#submitBtn {
+  width: 100%;
+  background-color: #28a745;
+}
+
+#submitBtn:hover {
+  background-color: #218838;
+}
+
+/* === Section Dropdown === */
+select.form-select, #sectionSelect {
+  max-width: 200px;
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+}
+
+/* === Results Section === */
+#results {
+  display: none;
+  max-width: 700px;
+  margin: 30px auto;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+}
+
+#score {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #17a2b8;
+}
+
+#answersReview p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+#answersReview hr {
+  margin: 10px 0;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .card, #quizBox, #results {
+    padding: 15px;
+  }
+
+  #question {
+    font-size: 1rem;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #submitBtn {
+    width: 100%;
   }
 }

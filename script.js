@@ -132,3 +132,20 @@ function submitQuiz() {
 
 startTimer();
 loadQuestion();
+
+function updateProgressBar() {
+  const total = questions[currentSection].length;
+  const progress = ((currentQuestion + 1) / total) * 100;
+  document.getElementById('progressBar').style.width = `${progress}%`;
+}
+
+
+
+
+
+
+
+
+
+
+
